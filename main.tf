@@ -1,11 +1,3 @@
-# Notes
-# Create AWS account by hand
-# Have to subscribe to BYOL Cisco ASAv on Marketplace: https://aws.amazon.com/marketplace/pp/B00WRGASUC
-# Created SSH key in AWS, easier than explaining how to do it locally
-# Created IAM user by hand, generate IAM static creds, export into CLI
-# export AWS_ACCESS_KEY_ID="AKIA2OUL6JU2K4HLYFNU"
-# export AWS_SECRET_ACCESS_KEY="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"
-
 # Require TF version to be same as or greater than 0.12.18
 terraform {
   required_version = ">=0.12.18"
