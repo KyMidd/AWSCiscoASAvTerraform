@@ -12,6 +12,7 @@ provider "aws" {
 locals {
   cisco_asav_name       = "CiscoASAv"  # Just for fun, name your ASAv anything you'd like!
   my_public_ip          = "1.2.3.4/32"  # Update this to your public IP when deploying
+  ssh_key_name          = "cisco_asav_keypair"  # Update only if you've created an SSH key with a different name than cisco_asav_keypair
   asav_public_facing_ip = "172.16.20.10"
 }
 
@@ -177,7 +178,7 @@ resource "aws_instance" "cisco_asav" {
   # This AMI is only valid in us-east-1 region, with this specific instance type
   ami           = "ami-01b0bfec54ba93d12"
   instance_type = "c4.large"
-  key_name      = "cisco_asav_keypair"
+  key_name      = local.ssh_key_name
 
   network_interface {
     network_interface_id = aws_network_interface.asav_private_interface.id
