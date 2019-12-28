@@ -10,8 +10,8 @@ provider "aws" {
 }
 
 locals {
-  cisco_asav_name       = "CiscoASAv"
-  my_public_ip          = "75.166.188.136/32"
+  cisco_asav_name       = "CiscoASAv"  # Just for fun, name your ASAv anything you'd like!
+  my_public_ip          = "1.2.3.4/32"  # Update this to your public IP when deploying
   asav_public_facing_ip = "172.16.20.10"
 }
 
